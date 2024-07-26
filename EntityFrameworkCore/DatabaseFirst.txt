@@ -1,0 +1,35 @@
+﻿
+  Database First Yalaşımı
+
+--EF Core ile çalışma yapılacak olan veritabanı önceden oluşturulmuş ve içerisinde tablolar yerleştirilerek 
+belirli çalışmalar yapılmış ise bu veritabanını kod kısmında  modellemek için en doğru yaklaşım Database First yaklaşımıdır
+
+--Database First ,var olan veritabanını tersine mühendislik ile analiz edip otomatik olarak kod kısmında modelleyen 
+bir yaklaşımdır 
+--Yani şöyle i hedef veritabanını belirli talimatlar aracılığı ile otomotik olarak kod kısmında OOP nimetleri eşliğinde 
+modellenmesidir
+
+
+  Avantajları 
+Hazır veritabanlarını hızlı bir şekilde modellememizi sağlar 
+veritabanında süreçte olan değişiklikleri de hızlıca koda aktarmamızı sağlar
+SQL Server, Oracle, PostgreSql vs. gibi EF Core tarafından desteklenen tü veritabanlarında kullanılabilir
+Veritabanından bağımsız olarak tüm modellemeyi OOP nimetleri karşılığında sağlamaktadır
+
+Dezavantajları
+
+Kod veritabanınna göre şekilleneceği /modelleneceği için yönetim veritabanı tarafından sağlanır
+haliyle veritabanı bilgisi gerektirir
+
+Değişiklik veritabanı kısmında olacağı için geliştirici tarafından sürekli bir kontrol/güncelleme davanışı sergilnmelidir
+
+
+  ???Database First hangi durumlarda tercih edilmeli 
+Önceden oluşturulmuş hali hazırda veritabanı var olan uygulamalarda
+Uzun süreli devam eden uygulamalarda 
+Veritabanı yönetimine , geliştirme süreçlerine ve tasarımına dair herhangi bir kararın gelitiriciler tarafından verilmediği 
+durumlarda tercih edilmelidir
+
+
+
+

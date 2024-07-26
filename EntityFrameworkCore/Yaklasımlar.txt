@@ -1,0 +1,31 @@
+﻿  Yaklaşımlar 
+  Yaklaşım; bir konuyu , olguyu , yapıyı ,inşayı ,sorunu ,çözümü ele alış 
+  bir başka deyişle ona bütüsel olarak bakış biiçimidir
+
+  Yaklaşımların Temel Amacı Nedir?
+  --ORM yapılanmasını ele alırken, veritabanını OOp nimetlerinden istifade ederek 
+  kod tarafında modellememizi sağlayan ve nesneler üzerinde sorgulama süreçlerini
+  yöneterek SQL'den bağımsız bir şekilde çalışmalar ortaya koyan pattern'dir
+  ---Bir ORM aracı olan EF Core ile yapılacak olan çalışmalarda da hedef 
+  veritabanının kod kısmına aktarması gerekmektedir
+  ---Lakin hedef veritabanı , bazen önceden oluşturulmuş bir veritabanı olabileceği gibi bazen de daha 
+  yeni oluşturulacak bir veritabanı da olabilmektedir
+  ---Yani olan bir veritabanı kod kısmında modellemek gayet gözle görülebilir bir durumken , hiç oluşturulmamış 
+  (yeni oluşturulacak olan) bir veritabanını da kod kısmında modellemek gerekebilmektedir.
+  ---İşte bu yaklaşımlar ,veritabanının önceden var olup olmaması durumlarına göre kod kısmında modelleme
+  süreçlerinin hangi davranışla gerçekleştirileceeğini belirleyecek olan tekniği bizlere sunmaktadır
+
+
+
+
+  ---EF Core , veritabanı çalışmaları için , veritabanının önceden olup
+  olmaması durumlarına göre farklı yaklaşımlar sunmaktadır
+  İşte bu durumlara göre farklı yaklaşımlar eşliğinde çözüm getirilmesi 
+  subjectif /öznel olmanın bir göstergesidir
+
+  ---EF Core veritabanlarıyla iki farklı yaklaşım baz alarak çalışmalar 
+  sergilemektedir
+  ---Bu yaklaşımlar 
+     DataBase First 
+     Code First   olmak üzere 2 tanedir
+
