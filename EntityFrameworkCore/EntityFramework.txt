@@ -1,0 +1,23 @@
+﻿
+Entity Framework Core Nedir?
+
+---Ef , ORM yaklaşımını benimsemiş bir araçtır 
+---Kod içerisinde OOP nimetlerinden istifade ederek SQL sorguları oluşturmamızı sağlamaktadır
+---Açık Kaynaklıdır (OPEN SOURCE)
+---Esnektir
+---Geliştirilebilir
+---Kod içerisinde ihtiyaca binaen geliştirilmiş olan tekrarlı SQL sorgucuklarından bizi kurtarır 
+--- Code First ve Database first yaklaşımları eşliğinde veritabanı ile yazılım arasındak kordinasyonu sağlamaktadır.
+---Kod üzerinde ; 
+   Veritabanı ve tablo, Constraint, Sequence, İlişkili Sorgular , View , Stored Procedure, Function, Temporal Table gibi veritabani nesnelerini
+   oluşturmamızı ve kullanmamızı sağlamaktadır
+---Query için LINQ sorgularını desteklemektedir
+
+ORM olarak neden EF Core Seçilmelidir
+---EF Core her ne kadar hızlı ve performanslı bir yapıya sahip olsa da piyasadaki en hızlı ORM aracı diyemeyiz
+---Misal olarak, minimal özelliklere sahip olan Dapper , Raw(ham) sorgular kullanıldığından dolayı kelimenin tam anlamıyla EF Core'dan çok daha
+hızlıdır.
+---Lakin her bir güncellemesinde performansının arttığı gözlemlenen EF Core'un ise birçok özelliği mevcuttur.
+---OOP nimetlerinden istifade etmemizi sağlayan EF Core ile class oluşturma nesne değişikliklerini izleme (Change Tracker) , mapping vs. gibi türlü 
+işlemleri gerçekleştirebiliriz
+
