@@ -1,0 +1,33 @@
+﻿  Tersine Mühendislik(Reverse Engineering) database first yaklaşımında kullanılır
+  --Tersine mühendislik , bir sunucudaki veritabanının iskelesini kod kısmında oluşturma sürecidir
+  Bu süreci Package MAnager Console (PMC) ya da Dotnet CLI aracılığıyla iki farklı şekilde yürütebiliriz
+
+
+  ***PMC ile Tersine mühendislik
+
+  Aşagıdaki talimatla hedef veri tabanının kod kısmında modellenmesini sağlar 
+   Scaffold-DbContext 'Connection String' Microsoft.EntityFrameworkCore.[Provider]
+   PMC ile veritabanının modelleyebilmek için aşagıdaki kütüphanelerin projeye yüklenmesi gerekmektedir
+   --Microsoft.EntityFrameworkCore.Tools
+   --Database.Provider(Örn; Microsoft.EntityFrameworkCore.SqlServer)
+
+
+   ---****Package Manager Console 'da  Scaffold-DbContext 'Data Source=DESKTOP-IUMMNFO\SQLEXPRESS;Initial Catalog=EasyCashDb;Integrated Security=True;Trust Server Certificate=True' Microsoft.EntityFrameworkCore.SqlServer
+   bu kodla Database First yaklaşımını gerçekleştiririz, veri tabanında tablolar kod kısmında modellenir 
+
+   ***Dotnet CLI ile Tersine Mühendislik 
+   Dotnet CLI ile veritabanını modelleyebilmek için aşagıdaki kütüphanelerin projeye yüklenmesi gerekmektedir
+   --Microsoft.EntityFrameworkCore.Desing
+   --Database Provider (Örn; Microsof.EntityFrsmeworkCore.SqlServer)
+   dotnet ef dbcontext scaffold 'Connection String' Microsoft.EntityFrameworkCore.[Provider]
+
+
+
+   Bu işlemlerle varsayılan olarak veritabanındaki tüm tablolar modellenir ,Sadece istenilen tabloların modellenebilmesi 
+   için aşagıdaki gibi talimatların verilmesi gerekmektedir 
+
+   --Scaffold-DbContext 'Connection String' Microsoft.EntityFrameworkCore.[PRovider]* Tables TAble1, Table2, 
+
+
+
+    

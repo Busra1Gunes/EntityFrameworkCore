@@ -20,4 +20,19 @@ hızlıdır.
 ---Lakin her bir güncellemesinde performansının arttığı gözlemlenen EF Core'un ise birçok özelliği mevcuttur.
 ---OOP nimetlerinden istifade etmemizi sağlayan EF Core ile class oluşturma nesne değişikliklerini izleme (Change Tracker) , mapping vs. gibi türlü 
 işlemleri gerçekleştirebiliriz
+---EF Core da veritabanını temsil edecek sınıf DbContext olarak nitelendirilir 
+
+  Db Context NEsnesinin Sorumlu Olduğu Faliyetler Nelerdir
+  *Konfiguration : Veritabanı bağlantısı , model yapılanmaları ve veritabanı nesnesi ile tablo nesneleri arasındaki ilişkileri
+  sağlar
+  *Sorgulama : Sorgulama operasyonlarını yürütür , Kod tarafında gerçekleştirilen sorgulama adımlarını SQL sorgusuna 
+  dönüştürür ve veritabanına gönderir 
+  *Change Tracking : Sorgulama neticesinde elde edilen veriler üzerindeki değişiklikleri takip eder
+  *Veri Kalıcılığı: Verilerin kayıt edilmesi , güncellenmesi ve silinmesi operasyonlarını gerçekleştirir
+  *Caching
+
+  EF Core da tabloları temsil eden sınıflar Entity olarak nitelendirilmektedir, kolonlarda entity sınıfları içerisinde property
+  olarak tanımlanmaktadır
+
+
 
