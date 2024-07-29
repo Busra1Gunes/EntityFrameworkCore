@@ -1,0 +1,4 @@
+﻿
+
+                              EF Core Aktörlerini İnceleyelim
+Not : Bir sınıfın context sınıf olması için DbContext'ten türemesi gerekir

@@ -26,8 +26,17 @@
    Bu işlemlerle varsayılan olarak veritabanındaki tüm tablolar modellenir ,Sadece istenilen tabloların modellenebilmesi 
    için aşagıdaki gibi talimatların verilmesi gerekmektedir 
 
-   --Scaffold-DbContext 'Connection String' Microsoft.EntityFrameworkCore.[PRovider]* Tables TAble1, Table2, 
 
+
+   Package Manager Console 
+   --Scaffold-DbContext 'Connection String' Microsoft.EntityFrameworkCore.[PRovider] -Tables Table1, Table2, 
+
+
+
+   //ortaklar ,masraflar ve takip tablolarını çeklemk için PMC yazılacak kod
+
+   Scaffold-DbContext 'Data Source=AYZASOFT-0000;Initial Catalog=hukdanUNI;Integrated Security=True;Trust Server Certificate=True'
+   Microsoft.EntityFrameworkCore.SqlServer -Tables masraflar, ortaklar,takip
 
 
     

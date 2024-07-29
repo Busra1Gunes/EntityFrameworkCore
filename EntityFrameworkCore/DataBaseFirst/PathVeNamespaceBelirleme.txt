@@ -1,0 +1,31 @@
+﻿        
+
+                    Path ve Namespace Belirleme
+
+           Entity'ler ve DbContext sınıfı , default olarak direkt projenin kök dizinine modelini ve projenin varsayılan namespace'ini kullanırlar
+           Eğer ki bunlara müdahale etmek istiyorsanız aşagıdaki gibi talimat verebilirsiniz
+
+           PATH
+           Scaffold -DbContext 'Connection String' Microsoft.EntityFrameworkCore.[Provider] -ContextDir Data  -OutputDir Models
+
+
+           Aşagıdaki kodla Context classı Context adlı class içinde oluşsun ,OutputDir ise Entityes adlı klasör içinde oluşsun dedikg
+
+   Scaffold-DbContext 'Data Source=AYZASOFT-0000;Initial Catalog=hukdanUNI;Integrated Security=True;Trust Server Certificate=True'
+  Microsoft.EntityFrameworkCore.SqlServer 
+ -Tables asgariUcretler,asgari_ucret_katsayi 
+ -ContextDir Context -OutputDir Entities
+        
+        NAMESPACE
+
+        Scaffold-DbContext 'Connection String' Microsoft.EntityFrameworkCOre.[Provider] -NAmespace YourNamespace -ContextNameSpace YourNameSpace
+
+
+        Örnek:
+        Scaffold-DbContext 'Data Source=AYZASOFT-0000;Initial Catalog=hukdanUNI;Integrated Security=True;Trust Server Certificate=True' 
+        Microsoft.EntityFrameworkCore.SqlServer 
+        -Tables asgariUcretler,asgari_ucret_katsayi 
+        -ContextDir Context 
+        -OutputDir Entities 
+        -Namespace EntityFrameworkCore 
+        -ContextNameSpace EntityFrameworkCore

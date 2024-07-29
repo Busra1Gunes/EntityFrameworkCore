@@ -1,0 +1,11 @@
+﻿
+
+                          Modellerin Özelleştirlimesi
+Database first yaklaşımında veritaban nesneleri otomotik olarak modellenmekte ve generate edilmektedir
+Bazen bu otomatize olan süreçte manuel de olsa entity'ler de yahut context nesnesinde özelleştirmeler yapmak isteriz
+
+Ama biliyoruz ki , veritabanında yapılan değişiklikler neticesinde Force komutu eşliğinde tüm değişiklikler kod kısmına sıfırdan yansıtılabilir
+ve bu da yapılan değişikliklerin ezilmesi riskinin olduğu söz konusu anlamına gelir
+
+Bu tarz özelleştirme durumlarında bizzat model sınıflarını kullanmaktansa bunların partial class'ları üzerinde çalışmak en doğrusundur
+

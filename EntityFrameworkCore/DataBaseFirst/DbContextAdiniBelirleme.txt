@@ -1,0 +1,8 @@
+﻿
+
+               DbContext Adını Belirleme
+
+Scaffold ile modellenen veritabanı için oluşturulacak context nesnesi adını veritabanından alacaktır.
+Eğer ki context nesnesinin adını değiştirmek istiyorsanız aşağıdaki gibi çalışabilirsiniz
+
+Scaffold -DbContext 'Connection String' Microsoft.EntityFrameworkCore.[Provider] -Context ContextName

@@ -1,0 +1,27 @@
+﻿            
+
+                   Model Güncelleme
+
+Veritabanında olan değişiklikleri kod kısmına yansıtabilmek için Scaffold talimatını tekrar vermemiz gerekmektedir, 
+lakin verilen talimat neticesinde ilgili sınıfların zaten var olduğuna dair hata mesajı sizleri yüksek ihtimalle karşılayacaktır
+
+bu hata ***the following file(s) already exist in directory ... Use the Force flag to overwrite these files
+
+Böyle bir durumda veritabanı modeline değişiklikleri manuel olarak yansıtabileceğimiz gibi (ki tavsiye etmeyiz), dosyalar var olsa dair zorla yeniden
+en güncel haliyle modellenmesini sağlayabiliriz
+Bunun için aşagıdaki gibi force talimatının verilmesi yeterli olucaktır
+
+Scaffold -DbContext 'Connection String' Microsoft.EntityFrameworkCore.[Provider] -Force
+
+
+Örnek=
+Scaffold-DbContext 'Data Source=AYZASOFT-0000;Initial Catalog=hukdanUNI;Integrated Security=True;Trust Server Certificate=True' 
+Microsoft.EntityFrameworkCore.SqlServer -Tables asgariUcretler,asgari_ucret_katsayi 
+-ContextDir Context 
+-OutputDir Entities  
+-Namespace EntityFrameworkCore 
+-ContextNameSpace EntityFrameworkCore 
+-Force
+
+
+
