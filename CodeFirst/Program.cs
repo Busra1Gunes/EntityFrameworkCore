@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 //await context.Database.MigrateAsync();
 
 
-//ExampleDb, DbContext'ten türeyen bir sınıf olduğu için veritabanı sunucusunda bir veritabanına karşılık gelen sınıf olduğu bilinir
+//ECommerceDbContext, DbContext'ten türeyen bir sınıf olduğu için veritabanı sunucusunda bir veritabanına karşılık gelen sınıf olduğu bilinir
 public class ECommerceDbContext:DbContext
 {
     //Tablo oluşturma
