@@ -1,0 +1,15 @@
+﻿
+                        Migration & Migrate Kavramları Nelerdir
+
+Migration: Migration dediğimiz yapılanma bizim kod kısmında modellediğimiz veri tabanını ,
+veri tabanını sunucusunun anlayacağı dile getiren bir c# classıdır
+
+Migrate : Migration'ı veri tabanına gönderip fiziksel olarak veri tabanı oluşturma eylemine migrate denir
+
+
+                     Migratin Oluşturmak İçin Temel Gereksinimler Nelerdir
+
+Migratin oluşturmak için temelde EF Core aktörleri olan DbContext ve Entity classlarını oluşturmak gerekir 
+Bunları oluşturduktan sonra migration Package Manager Console ve Dotnet CLI olmak üzere iki türlü talimatla verilebilir.
+-Her iki yöntemide kullanabilmek için Microsoft.EntityFrameWorkCore.Tools kütüphanesini uygulamaya yüklememiz gerekmektedir
+

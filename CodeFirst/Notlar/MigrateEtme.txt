@@ -1,0 +1,8 @@
+﻿   
+         Migration'ları Migrate Etme! (Up Fonksiyonu)
+
+         Package Manager Console
+          update-database
+
+          Dotnet CLI
+          dotnet ef database-update

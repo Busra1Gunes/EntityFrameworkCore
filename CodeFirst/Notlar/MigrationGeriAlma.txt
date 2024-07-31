@@ -1,0 +1,8 @@
+﻿  
+                     Migration Geri Alma
+                     (Down Fonksiyonu)
+ Package Manager Console
+  update-database[Migration Name]    ---->>>>  update-database mig_1    **mig_1'e geri dön
+
+  Dotnet CLI 
+  dotnet ef database update [Migration Name]

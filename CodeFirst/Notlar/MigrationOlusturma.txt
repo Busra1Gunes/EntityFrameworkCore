@@ -1,0 +1,43 @@
+﻿ 
+                              Migration Oluşturma 
+
+ Package Manager Console
+  
+  add-migration [Migration Name]     ---> add-migration mig_1
+
+  Dotnet CLI 
+
+   dotnet ef migrations add [Migration Name]
+
+
+
+  Up : Migrate sürecinde veritabanına gönderilecek olan bütün yapılanmaları yenilikleri barındırır
+  Down : Veritabanı sunucusunda yapılmış olanları geri almamızı sağlar
+   
+               
+                Migration Path'i Belirleme
+
+Package MAnager Console 
+   add-migration [Migration Name] -OutputDir[Path]          ---->>>>>>>>>  add-migration mig_1 -OutputDir Migrations
+
+Dotnet CLI
+
+dotnet ef migrations add [Migration Name] --output-dir[Path]
+
+
+       Migration SİLME
+
+Package Manager Console 
+   remove-migration
+
+Dotnet CLI
+  dotnet ef migrations remove
+
+
+    MİGRATİON LİSTELEME
+
+    PMC       get-migration
+
+    Dotnet CLI    dotnet ef migrations list
+  
+
