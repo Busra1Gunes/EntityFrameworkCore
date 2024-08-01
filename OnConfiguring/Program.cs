@@ -2,23 +2,46 @@
 using Microsoft.EntityFrameworkCore;
 
 
-        Console.WriteLine("123");
-        #region Veri Nasıl Eklenir
+Console.WriteLine("123");
+#region Veri Nasıl Eklenir
 
-        ETicaretContext context = new();
-        Urun urun = new()
-        {
-            UrunAdi = "A Ürünü",
-  
-        };
-       await  context.AddAsync(urun);
-        //veya  tip güvenli olacak şekilde
-        // await context.Urunler.AddAsync(urun); 
-       await context.SaveChangesAsync();
-        //Savechanges : insert, update ve delete sorgularını oluşturup bir transaction eşliğinde veritabanına gönderip execute eden fonksiyondur
-        //eğer ki oluşturulan sorgulardan birisi başarısız olursa tüm işlemleri geri alır()
-        #endregion
+ETicaretContext context = new();
+Urun urun = new()
+{
+    UrunAdi = "A Ürünü",
+    Fiyat = 10
+};
+Urun urun2 = new()
+{
+    UrunAdi = "B Ürünü",
+    Fiyat = 10
+};
+Urun urun3 = new()
+{
+    UrunAdi = "c Ürünü",
+    Fiyat = 10
+};
+await context.AddAsync(urun);
+#region AddRange
+await context.Urunler.AddRangeAsync(urun, urun2, urun3);
+#endregion
+//veya  tip güvenli olacak şekilde
+// await context.Urunler.AddAsync(urun); 
+await context.SaveChangesAsync();
 
+//Savechanges : insert, update ve delete sorgularını oluşturup bir transaction eşliğinde veritabanına gönderip execute eden fonksiyondur
+//eğer ki oluşturulan sorgulardan birisi başarısız olursa tüm işlemleri geri alır()
+#endregion
+
+// SaveChanges fonksiyonu her tetiklediğinde bir transaction oluşturulduğundan dolayı EF Core ile yapılan her bir işleme özel kullanmaktan
+//kaçınmalıyız, Çünki her işleme özel transaction veritabanı açısından ekstra maliyet demektir, O yüzden mümkün mertebe tüm işlemlerimizi tek bir 
+//trnsaction eşliğinde veri tabanına gönderebilmek için savechanges'ı aşagıdaki gibi tek seferde kullanmak hem maliyet hem de yönetilebilirlik 
+//açısından katkıda bulunmuş olacaktır
+
+
+#region ****Eklenen verinin generate Edilen Id'sini Elde Etme
+Console.WriteLine(urun.Id);
+#endregion
 
 public class ETicaretContext : DbContext
 {
