@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 
 
-
+Console.WriteLine("");
 //Kod üzerinden migrate işlemi
 //ECommerceDbContext context = new();
 //await context.Database.MigrateAsync();
