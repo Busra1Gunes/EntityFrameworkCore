@@ -1,8 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using Microsoft.EntityFrameworkCore;
-
 ETicaretContext context = new();
-
 #region En temel sorgulma nasıl yapılır
 //Metod Syntax
 var Urunler = await context.Urunler.ToListAsync();
@@ -11,9 +9,8 @@ var Urunler2 = await (from urun in context.Urunler
 					  select urun).ToListAsync();
 #endregion
 #region Sorguyu execute etmek için ne yapmamız gerekmektedir?
-
+//Sorguyu ToList veya foreach döngüsü ile execute ederiz
 #endregion
-//Sorguyu ToList ile execute ederiz veya foreach döngüsü ile
 
 #region IQueryable ve IEnumerable 
 //IQueryable örnek
@@ -52,24 +49,28 @@ foreach (var urun in veriler) //burda sorgu çalıştırılır ama  sorguda son 
 }
 
 #endregion
-public class ETicaretContext : DbContext
-{
-	public DbSet<Urun> Urunler { get; set; }
-	public DbSet<Parca> Parcalar { get; set; }
-	protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-	{
-		optionsBuilder.UseSqlServer("Data Source=DESKTOP-IUMMNFO\\SQLEXPRESS;Database=ETicaretDB;Integrated Security=True;Trust Server Certificate=True");
-	}
-}
-public class Urun
-{
-	public int Id { get; set; }
-	public string UrunAdi { get; set; }
-	public float Fiyat { get; set; }
-	public ICollection<Parca> Parcalar { get; set; }
-}
-public class Parca
-{
-	public int Id { get; set; }
-	public string ParcaAdi { get; set; }
-}
+#region Çogul veri getiren sorgulama fonksiyonları
+#region ToListAsync
+//Üretilen sorguyu execute ettirmemizi sağlayan sorgudur IQueryable den IEnumerable geçmemizi sağlar
+#endregion
+#region Where
+//Oluşturulan sağlayan where şartı eklmemizi sağlayan bir fonkisyondur
+#endregion
+#region OrderBy
+//Sorgu üzerinde sıralama yapmamızı sağlayan fonksiyondur,OrderBy ascending olarak sıralamayı yapar
+#endregion
+#region ThenBy
+//OrderBy üzerinde yapılan sıralama işemini farklı kolonlarada uygulamamız sağlar default olarak ascending
+var thenby = context.Urunler.Where(u => u.Id > 2 || u.UrunAdi.StartsWith("A")).
+	OrderBy(u => u.Fiyat).ThenBy(t => t.UrunAdi).ThenBy(t => t.Id);
+//Fiyat özelliği eşit olan öğeleri UrunAdi özelliğine göre artan sıraya göre ikinci bir düzeyde sıralar.
+//önce fiyata göre sıralıyor fiyatı aynı olanları ürün adına göre sıralıyor , ürün adı aynı olanları ise ID ye göre sıralıyor
+#endregion
+#region OrderByDescending
+//descending olarak sıralama yapmamızı sağlayan fonksiyondur
+#endregion
+#region ThenByDescending
+//OrderByDescending üzerinde yapılan sıralama işemini farklı kolonlarada uygulamamız sağlar default olarak ascending
+#endregion
+
+#endregion
