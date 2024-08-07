@@ -74,3 +74,7 @@ var thenby = context.Urunler.Where(u => u.Id > 2 || u.UrunAdi.StartsWith("A")).
 #endregion
 
 #endregion
+#region FindAsync
+//Find fonksiyonu primary key kolonuna özel hızlı bir şekilde sorgulama yapmamızı sağlayan bir fonksiyondur
+Urun urun1 = await context.Urunler.FindAsync(1);
+#endregion
