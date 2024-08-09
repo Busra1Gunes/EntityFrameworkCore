@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnConfiguring", "OnConfigur
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VeriKaliciligi", "VeriKaliciligi\VeriKaliciligi.csproj", "{3AFF935D-E39B-431D-B236-C6F3E22C50B2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Querying", "Querying\Querying.csproj", "{75A1242D-B29F-4606-AC5E-5F887D055271}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Querying", "Querying\Querying.csproj", "{75A1242D-B29F-4606-AC5E-5F887D055271}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChangeTracker", "ChangeTracker\ChangeTracker.csproj", "{A42DE086-52D7-40F4-9B53-DE8F87D7A628}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{75A1242D-B29F-4606-AC5E-5F887D055271}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{75A1242D-B29F-4606-AC5E-5F887D055271}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{75A1242D-B29F-4606-AC5E-5F887D055271}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A42DE086-52D7-40F4-9B53-DE8F87D7A628}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A42DE086-52D7-40F4-9B53-DE8F87D7A628}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A42DE086-52D7-40F4-9B53-DE8F87D7A628}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A42DE086-52D7-40F4-9B53-DE8F87D7A628}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
