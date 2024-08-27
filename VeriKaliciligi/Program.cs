@@ -33,6 +33,7 @@ user2.Age = 21;
 await context.SaveChangesAsync();
 #endregion
 
+
 #region Toplu Kayıt Güncelleme
 List<User> user3 = context.Users.Where(a => a.Id < 5).ToList();
 user3.ForEach(a => a.Name = "*");
